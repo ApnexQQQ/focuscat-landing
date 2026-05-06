@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusCat - Help Your Kids Stay Focused</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #00ff88;
+            color: #000;
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0,255,136,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,255,136,0.4);
+        }
+        
+        .features {
+            background: white;
+            padding: 80px 20px;
+            margin: 40px -20px;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #333;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .how-it-works {
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+        }
+        
+        .how-it-works h2 {
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 20px;
+            width: 280px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .step-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #00ff88;
+            margin-bottom: 20px;
+        }
+        
+        .reactions {
+            background: #f8f9fa;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .reactions h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .reaction-preview {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .video-placeholder {
+            background: #333;
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+        
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #00ff88;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🐱</div>
+            <h1>FocusCat</h1>
+            <p class="tagline">The fun way to help your kids stay focused</p>
+            <a href="https://github.com/ApnexQQQ/focuscat/releases" class="cta-button">📱 Download Free</a>
+        </header>
+        
+        <section class="features">
+            <h2>Why Parents Love FocusCat</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">😺</div>
+                    <h3>Friendly Blocking</h3>
+                    <p>Instead of harsh restrictions, a cute cat gently reminds kids to stay focused with funny messages.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">😂</div>
+                    <h3>Reaction Recording</h3>
+                    <p>Capture hilarious 10-second videos of your kid's reaction when they get blocked. Share the laughs!</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📹</div>
+                    <h3>Parent Messages</h3>
+                    <p>Record personal video messages that play when your child tries to open blocked apps.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Smart Schedules</h3>
+                    <p>Set bedtime, homework, and dinner schedules. The app blocks automatically.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>PIN Protected</h3>
+                    <p>Kids can't disable the app without your PIN. You're always in control.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Focus Stats</h3>
+                    <p>Track focus streaks and celebrate wins together. Gamify productivity!</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Set Focus Time</h3>
+                    <p>Choose how long your child should focus - from 5 minutes to 8 hours</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Cat Blocks Apps</h3>
+                    <p>When they try to open Instagram or TikTok, the cat appears with a funny message</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Capture Reactions</h3>
+                    <p>Optional: Record their hilarious reactions to share with family</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="reactions">
+            <h2>😂 Viral Reactions</h2>
+            <p>Parents are sharing their kids' funny blocked reactions on TikTok!</p>
+            <div class="reaction-preview">
+                <div class="video-placeholder">📹</div>
+                <p style="margin-top: 20px; color: #666;">Record your own reactions and join the fun!</p>
+            </div>
+        </section>
+        
+        <footer>
+            <p><strong>FocusCat</strong> - Made with ❤️ for parents everywhere</p>
+            <p style="margin-top: 20px;">
+                <a href="https://apnexqqq.github.io/focuscat/privacy-policy.html">Privacy Policy</a> | 
+                <a href="https://github.com/ApnexQQQ/focuscat">GitHub</a>
+            </p>
+            <p style="margin-top: 20px; opacity: 0.7;">Free forever • No ads • No data collection</p>
+        </footer>
+    </div>
+</body>
+</html>
