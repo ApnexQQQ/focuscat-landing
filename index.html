@@ -76,9 +76,12 @@
         }
         
         .cat-image {
-            font-size: 140px;
+            width: 200px;
+            height: 200px;
             z-index: 1;
             animation: breathe 2s ease-in-out infinite;
+            object-fit: contain;
+            filter: drop-shadow(0 0 20px rgba(0,255,136,0.5));
         }
         
         @keyframes breathe {
@@ -252,7 +255,7 @@
         <!-- Cat Section -->
         <div class="cat-section">
             <div class="cat-glow"></div>
-            <div class="cat-image">🐱</div>
+            <img src="cat.jpg" alt="FocusCat" class="cat-image">
             <div class="tagline">Help your kids stay focused<br>with a friendly cat!</div>
         </div>
         
