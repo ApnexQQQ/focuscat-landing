@@ -34,20 +34,30 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 16px;
+            padding: 8px 0;
         }
         
         .logo {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
-            color: #00ffff;
-            text-shadow: 0 0 12px #00ffff;
+            color: #00F5FF;
+            text-shadow: 0 0 20px #00F5FF, 0 0 40px #00F5FF;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo::before {
+            content: "🐾";
+            font-size: 24px;
+            filter: drop-shadow(0 0 10px #00F5FF);
         }
         
         .streak {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
-            color: #ff9500;
-            text-shadow: 0 0 10px #ff9500;
+            color: #FF9500;
+            text-shadow: 0 0 15px #FF9500, 0 0 30px #FF9500;
         }
         
         /* Cat Section */
@@ -63,25 +73,25 @@
         
         .cat-glow {
             position: absolute;
-            width: 280px;
-            height: 280px;
-            background: radial-gradient(circle, rgba(0,255,136,0.3) 0%, transparent 70%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0,245,255,0.4) 0%, rgba(0,255,170,0.2) 40%, transparent 70%);
             border-radius: 50%;
             animation: pulse 2s ease-in-out infinite;
+            filter: blur(20px);
         }
         
         @keyframes pulse {
-            0%, 100% { transform: scale(0.95); opacity: 0.7; }
-            50% { transform: scale(1.05); opacity: 1; }
+            0%, 100% { transform: scale(0.9); opacity: 0.6; }
+            50% { transform: scale(1.1); opacity: 1; }
         }
         
         .cat-image {
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             z-index: 1;
             animation: breathe 2s ease-in-out infinite;
-            object-fit: contain;
-            filter: drop-shadow(0 0 20px rgba(0,255,136,0.5));
+            filter: drop-shadow(0 0 30px rgba(0,245,255,0.8));
         }
         
         @keyframes breathe {
@@ -90,117 +100,250 @@
         }
         
         .tagline {
-            margin-top: 20px;
-            font-size: 18px;
+            margin-top: 24px;
+            font-size: 20px;
             text-align: center;
             color: #fff;
-            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            text-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(0,245,255,0.5);
+            font-weight: 600;
+            line-height: 1.4;
         }
         
-        /* Download Button - Neon Green */
-        .download-btn {
-            background: linear-gradient(135deg, #80ff00 0%, #66cc00 100%);
+        /* Neon Cyan Button - START FOCUS style */
+        .btn-cyan {
+            background: linear-gradient(180deg, #00FFFF 0%, #00FFAA 100%);
             border: none;
-            border-radius: 16px;
-            padding: 20px;
-            margin: 16px 0;
+            border-radius: 28px;
+            padding: 22px 32px;
+            margin: 12px 0;
             cursor: pointer;
-            box-shadow: 0 8px 32px rgba(128,255,0,0.4);
+            box-shadow: 
+                0 0 20px rgba(0,245,255,0.6),
+                0 0 40px rgba(0,245,255,0.4),
+                0 0 60px rgba(0,245,255,0.2),
+                inset 0 2px 4px rgba(255,255,255,0.3);
             transition: all 0.3s;
             text-decoration: none;
             display: block;
+            position: relative;
+            overflow: hidden;
         }
         
-        .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(128,255,0,0.5);
+        .btn-cyan::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(180deg, #00F5FF, #00FFAA);
+            border-radius: 30px;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.8;
         }
         
-        .download-btn:active {
-            transform: translateY(0);
+        .btn-cyan:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 
+                0 0 30px rgba(0,245,255,0.8),
+                0 0 60px rgba(0,245,255,0.5),
+                0 0 90px rgba(0,245,255,0.3);
         }
         
-        .download-text {
+        .btn-cyan:active {
+            transform: translateY(0) scale(0.98);
+        }
+        
+        .btn-text-cyan {
             font-size: 20px;
             font-weight: bold;
             color: #000;
             text-align: center;
             display: block;
+            text-shadow: 0 1px 2px rgba(255,255,255,0.5);
         }
         
-        /* Feature Cards */
+        /* Neon Pink Button - SET TIMER style */
+        .btn-pink {
+            background: linear-gradient(180deg, #FF1493 0%, #FF006E 100%);
+            border: none;
+            border-radius: 28px;
+            padding: 22px 32px;
+            margin: 12px 0;
+            cursor: pointer;
+            box-shadow: 
+                0 0 20px rgba(255,0,110,0.6),
+                0 0 40px rgba(255,0,110,0.4),
+                0 0 60px rgba(255,0,110,0.2),
+                inset 0 2px 4px rgba(255,255,255,0.3);
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-pink::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(180deg, #FF1493, #FF006E);
+            border-radius: 30px;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.8;
+        }
+        
+        .btn-pink:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 
+                0 0 30px rgba(255,0,110,0.8),
+                0 0 60px rgba(255,0,110,0.5),
+                0 0 90px rgba(255,0,110,0.3);
+        }
+        
+        .btn-pink:active {
+            transform: translateY(0) scale(0.98);
+        }
+        
+        .btn-text-pink {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            display: block;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        /* Feature Cards with neon borders */
         .features {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 16px 0;
+            gap: 16px;
+            margin: 24px 0;
         }
         
         .feature-card {
-            background: rgba(255,255,255,0.1);
+            background: rgba(0,0,0,0.3);
             backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 16px;
+            border-radius: 20px;
+            padding: 20px 16px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            box-shadow: 
+                0 0 20px rgba(0,245,255,0.2),
+                inset 0 0 20px rgba(0,245,255,0.05);
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #00F5FF, #FF1493);
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0.5;
         }
         
         .feature-icon {
-            font-size: 32px;
-            margin-bottom: 8px;
+            font-size: 36px;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
         }
         
         .feature-title {
-            font-size: 14px;
+            font-size: 15px;
             font-weight: bold;
-            color: #80ff00;
-            margin-bottom: 4px;
+            color: #00F5FF;
+            margin-bottom: 6px;
+            text-shadow: 0 0 10px rgba(0,245,255,0.5);
         }
         
         .feature-desc {
             font-size: 12px;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255,255,255,0.8);
+            line-height: 1.4;
         }
         
-        /* Reaction Section */
+        /* Reaction Section with pink neon */
         .reaction-section {
-            background: linear-gradient(135deg, rgba(255,0,136,0.2) 0%, rgba(255,0,85,0.2) 100%);
-            border-radius: 20px;
-            padding: 20px;
-            margin: 16px 0;
+            background: rgba(0,0,0,0.3);
+            border-radius: 24px;
+            padding: 28px 24px;
+            margin: 20px 0;
             text-align: center;
-            border: 1px solid rgba(255,0,136,0.3);
+            position: relative;
+            border: 2px solid transparent;
+            box-shadow: 
+                0 0 30px rgba(255,0,110,0.3),
+                inset 0 0 30px rgba(255,0,110,0.1);
+        }
+        
+        .reaction-section::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #FF1493, #FF006E);
+            border-radius: 26px;
+            z-index: -1;
+            opacity: 0.6;
+            filter: blur(2px);
         }
         
         .reaction-title {
-            font-size: 24px;
-            margin-bottom: 8px;
+            font-size: 26px;
+            margin-bottom: 12px;
+            color: #FF1493;
+            text-shadow: 0 0 20px rgba(255,20,147,0.8), 0 0 40px rgba(255,0,110,0.5);
         }
         
         .reaction-text {
-            font-size: 14px;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 16px;
+            font-size: 15px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
         
         .reaction-preview {
-            background: rgba(0,0,0,0.3);
-            border-radius: 12px;
-            padding: 40px;
-            font-size: 48px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+            border-radius: 16px;
+            padding: 50px;
+            font-size: 56px;
+            box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
         }
         
         /* Footer */
         .footer {
             text-align: center;
-            padding: 20px 0;
-            color: rgba(255,255,255,0.5);
-            font-size: 12px;
+            padding: 28px 16px;
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+            margin-top: auto;
         }
         
         .footer a {
-            color: #00ffff;
+            color: #00F5FF;
             text-decoration: none;
+            text-shadow: 0 0 10px rgba(0,245,255,0.5);
+            transition: all 0.3s;
+        }
+        
+        .footer a:hover {
+            color: #00FFFF;
+            text-shadow: 0 0 20px rgba(0,245,255,0.8);
         }
         
         /* Floating particles */
@@ -219,8 +362,9 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background: rgba(128,255,0,0.5);
+            background: rgba(0,245,255,0.6);
             border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,245,255,0.8);
             animation: float 10s infinite;
         }
         
@@ -229,6 +373,30 @@
             10% { opacity: 1; }
             90% { opacity: 1; }
             100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 400px) {
+            .cat-image {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .btn-cyan, .btn-pink {
+                padding: 18px 24px;
+            }
+            
+            .btn-text-cyan, .btn-text-pink {
+                font-size: 18px;
+            }
+            
+            .features {
+                gap: 12px;
+            }
+            
+            .feature-card {
+                padding: 16px 12px;
+            }
         }
     </style>
 </head>
@@ -248,7 +416,7 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <div class="logo">🐾 FocusCat</div>
+            <div class="logo">FocusCat</div>
             <div class="streak">🔥 FREE</div>
         </div>
         
@@ -259,12 +427,17 @@
             <div class="tagline">Help your kids stay focused<br>with a friendly cat!</div>
         </div>
         
-        <!-- Download Button -->
-        <a href="https://github.com/ApnexQQQ/focuscat/releases/latest" class="download-btn">
-            <span class="download-text">📱 DOWNLOAD FREE</span>
+        <!-- Neon Cyan Download Button -->
+        <a href="https://github.com/ApnexQQQ/focuscat/releases/latest" class="btn-cyan">
+            <span class="btn-text-cyan">🚀 DOWNLOAD FREE</span>
         </a>
         
-        <!-- Features -->
+        <!-- Neon Pink Secondary Button -->
+        <a href="https://apnexqqq.github.io/focuscat/privacy-policy.html" class="btn-pink">
+            <span class="btn-text-pink">🔒 PRIVACY POLICY</span>
+        </a>
+        
+        <!-- Features with neon borders -->
         <div class="features">
             <div class="feature-card">
                 <div class="feature-icon">😺</div>
@@ -288,7 +461,7 @@
             </div>
         </div>
         
-        <!-- Reaction Section -->
+        <!-- Reaction Section with pink neon -->
         <div class="reaction-section">
             <div class="reaction-title">😂 Viral Reactions</div>
             <div class="reaction-text">Parents are sharing their kids' hilarious blocked moments on TikTok!</div>
@@ -298,11 +471,11 @@
         <!-- Footer -->
         <div class="footer">
             <p>Made with ❤️ for parents everywhere</p>
-            <p style="margin-top: 8px;">
+            <p style="margin-top: 12px;">
                 <a href="https://apnexqqq.github.io/focuscat/privacy-policy.html">Privacy</a> • 
                 <a href="https://github.com/ApnexQQQ/focuscat">GitHub</a>
             </p>
-            <p style="margin-top: 8px; opacity: 0.6;">Free forever • No ads • No tracking</p>
+            <p style="margin-top: 12px; opacity: 0.7;">Free forever • No ads • No tracking</p>
         </div>
     </div>
 </body>
